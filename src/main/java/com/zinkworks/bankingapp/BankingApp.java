@@ -1,13 +1,16 @@
+package com.zinkworks.bankingapp;
+
+import com.zinkworks.bankingapp.service.BankAcc;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
 public class BankingApp {
     public static void main (String... args) {
-        BankingApp.run(
+        SpringApplication.run(
                 BankingApp.class, args);
+
+        BankAcc ruth = new BankAcc("Ruth Cassidy", "A82P202");
+        ruth.showMenu();
     }
 }
-}
-
