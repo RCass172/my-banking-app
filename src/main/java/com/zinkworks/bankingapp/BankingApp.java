@@ -1,6 +1,7 @@
 package com.zinkworks.bankingapp;
 
 import com.zinkworks.bankingapp.service.BankAcc;
+import com.zinkworks.bankingapp.service.MyBank;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,7 +11,7 @@ public class BankingApp {
         SpringApplication.run(
                 BankingApp.class, args);
 
-        BankAcc ruth = new BankAcc("Ruth Cassidy", "A82P202");
-        ruth.showMenu();
+        MyBank ruth = new BankAcc();
+        ruth.showMenu("Ruth Cassidy", "A82P202");
     }
 }

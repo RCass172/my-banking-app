@@ -1,18 +1,15 @@
 package com.zinkworks.bankingapp.service;
+import org.springframework.stereotype.Service;
+
 import java.util.Scanner;
 
-public class BankAcc {
+@Service("MyBank")
+public class BankAcc implements MyBank {
     // class variables
     int balance;
     int prevTransaction;
     String customerName;
     String customerId;
-
-    // class constructor
-    public BankAcc(String cname, String cid) {
-        customerName = cname;
-        customerId = cid;
-    }
 
     public void deposit(int amount) {
         if (amount != 0) {
@@ -45,7 +42,9 @@ public class BankAcc {
         }
     }
 
-    public void showMenu() {
+    public String showMenu(String cname, String cid) {
+        customerName = cname;
+        customerId = cid;
         char option = '\0';
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome " + customerName + "!");
@@ -98,5 +97,6 @@ public class BankAcc {
             }
         } while (option != 'F');
         System.out.println("Thank you for banking with us");
+        return cname;
     }
 }
