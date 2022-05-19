@@ -11,7 +11,5 @@ public class BankingApp {
         SpringApplication.run(
                 BankingApp.class, args);
 
-        MyBank ruth = new BankAcc();
-        ruth.showMenu("Ruth Cassidy", "A82P202");
     }
 }
