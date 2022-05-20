@@ -6,6 +6,8 @@ public class BankAccount {
     private String customerName;
     private String customerId;
 
+    public BankAccount() {}
+
     public int getBalance() {
         return balance;
     }

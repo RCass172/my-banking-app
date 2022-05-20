@@ -5,6 +5,7 @@ import com.zinkworks.pojo.BankAccount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -20,7 +21,7 @@ public class BankingAppController {
 
 
     @PostMapping("/balance")
-    public BankAccount bank(BankAccount bankAccount) {
+    public BankAccount bank(@RequestBody BankAccount bankAccount) {
         return myBank.balance(bankAccount);
     }
 
