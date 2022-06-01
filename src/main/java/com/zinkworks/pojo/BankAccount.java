@@ -6,7 +6,11 @@ public class BankAccount {
     private String customerName;
     private String customerId;
 
-    public BankAccount() {}
+    public BankAccount(String customerName, String customerId, int balance) {
+        this.customerName = customerName;
+        this.customerId = customerId;
+        this.balance = balance;
+    }
 
     public int getBalance() {
         return balance;
